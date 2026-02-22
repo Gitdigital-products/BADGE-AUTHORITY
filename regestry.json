@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "generated_at": "",
+  "namespaces": {
+    "loan.infrastructure": [
+      {
+        "id": "loan.infrastructure.initialized",
+        "name": "Loan Infrastructure Initialized",
+        "path": "badges/loan/infrastructure/initialized.json"
+      },
+      {
+        "id": "loan.infrastructure.ledger_ready",
+        "name": "Loan Ledger Ready",
+        "path": "badges/loan/infrastructure/ledger_ready.json"
+      },
+      {
+        "id": "loan.infrastructure.webhook_verified",
+        "name": "Loan Webhook Verified",
+        "path": "badges/loan/infrastructure/webhook_verified.json"
+      },
+      {
+        "id": "loan.infrastructure.credit_pipeline_enabled",
+        "name": "Credit Pipeline Enabled",
+        "path": "badges/loan/infrastructure/credit_pipeline_enabled.json"
+      },
+      {
+        "id": "loan.infrastructure.compliance_synced",
+        "name": "Compliance Synced",
+        "path": "badges/loan/infrastructure/compliance_synced.json"
+      },
+      {
+        "id": "loan.infrastructure.funding_authority_bound",
+        "name": "Funding Authority Bound",
+        "path": "badges/loan/infrastructure/funding_authority_bound.json"
+      },
+      {
+        "id": "loan.infrastructure.reviewer_ready",
+        "name": "Reviewer Workflow Ready",
+        "path": "badges/loan/infrastructure/reviewer_ready.json"
+      }
+    ],
+    "loan.governance": [
+      {
+        "id": "loan.governance.schema_v1",
+        "name": "Loan Governance Schema v1",
+        "path": "badges/loan/governance/schema_v1.json"
+      },
+      {
+        "id": "loan.governance.promissory_note_issued",
+        "name": "Promissory Note Issued",
+        "path": "badges/loan/governance/promissory_note_issued.json"
+      },
+      {
+        "id": "loan.governance.ledger_event_recorded",
+        "name": "Loan Ledger Event Recorded",
+        "path": "badges/loan/governance/ledger_event_recorded.json"
+      },
+      {
+        "id": "loan.governance.credit_report_generated",
+        "name": "Credit Report Generated",
+        "path": "badges/loan/governance/credit_report_generated.json"
+      },
+      {
+        "id": "loan.governance.forgiveness_authority",
+        "name": "Loan Forgiveness Authority",
+        "path": "badges/loan/governance/forgiveness_authority.json"
+      },
+      {
+        "id": "loan.governance.collateral_verified",
+        "name": "Collateral Verified",
+        "path": "badges/loan/governance/collateral_verified.json"
+      }
+    ],
+    "loan.execution": [
+      {
+        "id": "loan.execution.disbursement_completed",
+        "name": "Loan Disbursement Completed",
+        "path": "badges/loan/execution/disbursement_completed.json"
+      },
+      {
+        "id": "loan.execution.payment_received",
+        "name": "Loan Payment Received",
+        "path": "badges/loan/execution/payment_received.json"
+      },
+      {
+        "id": "loan.execution.default_flagged",
+        "name": "Loan Default Flagged",
+        "path": "badges/loan/execution/default_flagged.json"
+      },
+      {
+        "id": "loan.execution.forgiven",
+        "name": "Loan Forgiven",
+        "path": "badges/loan/execution/forgiven.json"
+      }
+    ]
+  }
+}
