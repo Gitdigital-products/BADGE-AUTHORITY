@@ -1,0 +1,398 @@
+{
+  "badges": [
+    {
+      "id": "governance.founding_authority",
+      "name": "Founding Authority",
+      "category": "Governance",
+      "description": "Core governance authority granted to founding entities.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["governance_event:founding"],
+        "required_fields": ["subject", "issued_at", "scope"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "governance.policy_steward",
+      "name": "Policy Steward",
+      "category": "Governance",
+      "description": "Maintains and updates governance policies and rulesets.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["governance_approval", "policy_update"],
+        "required_fields": ["subject", "issued_at", "repo"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "governance.risk_committee",
+      "name": "Risk Committee",
+      "category": "Governance",
+      "description": "Evaluates risk, compliance, and credit logic across the ecosystem.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["risk_review_completed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "governance.governance_reviewer",
+      "name": "Governance Reviewer",
+      "category": "Governance",
+      "description": "Validates governance changes and ensures compliance with authority rules.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["governance_review_completed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "governance.protocol_auditor",
+      "name": "Protocol Auditor",
+      "category": "Governance",
+      "description": "Audits workflows, ledger logic, and authority rules for correctness.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["audit_completed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+
+    {
+      "id": "compliance.kyc_verified",
+      "name": "KYC Verified",
+      "category": "Compliance",
+      "description": "Identity verified through KYC procedures.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["kyc_passed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "compliance.security_cleared",
+      "name": "Security Cleared",
+      "category": "Compliance",
+      "description": "Passed internal security review and clearance.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["security_review_passed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "compliance.ledger_custodian",
+      "name": "Ledger Custodian",
+      "category": "Compliance",
+      "description": "Authorized to maintain and update ledger state.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["ledger_access_granted"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "compliance.compliance_reporter",
+      "name": "Compliance Reporter",
+      "category": "Compliance",
+      "description": "Files compliance and audit reports for the organization.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["compliance_report_submitted"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "compliance.data_steward",
+      "name": "Data Steward",
+      "category": "Compliance",
+      "description": "Handles sensitive or regulated data under strict governance.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["data_access_granted"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+
+    {
+      "id": "credit.credit_reporter",
+      "name": "Credit Reporter",
+      "category": "Credit",
+      "description": "Submits credit events to the Credit Authority.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["credit_event_submitted"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "credit.credit_verified",
+      "name": "Credit Verified",
+      "category": "Credit",
+      "description": "Identity and credit profile verified by the Credit Authority.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["credit_identity_verified"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "credit.loan_originator",
+      "name": "Loan Originator",
+      "category": "Credit",
+      "description": "Authorized to create loan governance packets.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["loan_packet_created"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "credit.loan_reviewer",
+      "name": "Loan Reviewer",
+      "category": "Credit",
+      "description": "Validates loan governance packets for correctness and compliance.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["loan_review_completed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "credit.collateral_custodian",
+      "name": "Collateral Custodian",
+      "category": "Credit",
+      "description": "Manages collateral metadata and validation.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["collateral_registered"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+
+    {
+      "id": "contributor.core_engineer",
+      "name": "Core Engineer",
+      "category": "Contributor",
+      "description": "Sustained technical contributions to core repositories.",
+      "version": "1.1.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.1.0",
+        "status": "active",
+        "triggers": ["merged_prs>=25", "sustained_activity>=120d"],
+        "required_fields": ["subject", "repo", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "contributor.ecosystem_advocate",
+      "name": "Ecosystem Advocate",
+      "category": "Contributor",
+      "description": "Community engagement and ecosystem support.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["community_engagement>=50"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "contributor.docs_steward",
+      "name": "Docs Steward",
+      "category": "Contributor",
+      "description": "Maintains documentation and governance clarity.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["docs_updates>=10"],
+        "required_fields": ["subject", "repo", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "contributor.issue_triage",
+      "name": "Issue Triage",
+      "category": "Contributor",
+      "description": "Maintains issue queues and triage workflows.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["issues_triaged>=20"],
+        "required_fields": ["subject", "repo", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "contributor.contributor_gold",
+      "name": "Contributor Gold",
+      "category": "Contributor",
+      "description": "Long-term, high-impact contributions across the ecosystem.",
+      "version": "1.1.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.1.0",
+        "status": "active",
+        "triggers": ["merged_prs>=10", "sustained_activity>=90d"],
+        "required_fields": ["subject", "repo", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+
+    {
+      "id": "funding.sponsor_tier_1",
+      "name": "Sponsor Tier I",
+      "category": "Funding",
+      "description": "Entry-level sponsorship for GitDigital ecosystem support.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["funding_received>=100"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "funding.sponsor_tier_2",
+      "name": "Sponsor Tier II",
+      "category": "Funding",
+      "description": "Mid-level sponsorship for GitDigital ecosystem support.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["funding_received>=500"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "funding.sponsor_tier_3",
+      "name": "Sponsor Tier III",
+      "category": "Funding",
+      "description": "High-level sponsorship for GitDigital ecosystem support.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["funding_received>=1000"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "funding.grant_recipient",
+      "name": "Grant Recipient",
+      "category": "Funding",
+      "description": "Awarded GitDigital grants for ecosystem contributions.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["grant_awarded"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "funding.ecosystem_supporter",
+      "name": "Ecosystem Supporter",
+      "category": "Funding",
+      "description": "Recurring support for GitDigital ecosystem growth.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["recurring_support>=3"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    },
+    {
+      "id": "funding.infrastructure_sponsor",
+      "name": "Infrastructure Sponsor",
+      "category": "Funding",
+      "description": "Funds infrastructure, tooling, or operational capacity.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["infra_funding>=1"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      }
+    }
+  ]
+}
