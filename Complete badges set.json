@@ -1,0 +1,427 @@
+{
+  "badges": [
+    {
+      "id": "governance.founding_authority",
+      "name": "Founding Authority",
+      "category": "Governance",
+      "description": "Core governance authority granted to founding entities.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["governance_event:founding"],
+        "required_fields": ["subject", "issued_at", "scope"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"governance.founding_authority\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#9945FF",
+        "color_secondary": "#14F195"
+      }
+    },
+
+    {
+      "id": "governance.policy_steward",
+      "name": "Policy Steward",
+      "category": "Governance",
+      "description": "Maintains and updates governance policies and rulesets.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["governance_approval", "policy_update"],
+        "required_fields": ["subject", "issued_at", "repo"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"governance.policy_steward\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#9945FF",
+        "color_secondary": "#14F195"
+      }
+    },
+
+    {
+      "id": "governance.risk_committee",
+      "name": "Risk Committee",
+      "category": "Governance",
+      "description": "Evaluates risk, compliance, and credit logic across the ecosystem.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["risk_review_completed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"governance.risk_committee\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#9945FF",
+        "color_secondary": "#14F195"
+      }
+    },
+
+    {
+      "id": "governance.governance_reviewer",
+      "name": "Governance Reviewer",
+      "category": "Governance",
+      "description": "Validates governance changes and ensures compliance with authority rules.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["governance_review_completed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"governance.governance_reviewer\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#9945FF",
+        "color_secondary": "#14F195"
+      }
+    },
+
+    {
+      "id": "governance.protocol_auditor",
+      "name": "Protocol Auditor",
+      "category": "Governance",
+      "description": "Audits workflows, ledger logic, and authority rules for correctness.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["audit_completed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"governance.protocol_auditor\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#9945FF",
+        "color_secondary": "#14F195"
+      }
+    },
+
+    {
+      "id": "compliance.kyc_verified",
+      "name": "KYC Verified",
+      "category": "Compliance",
+      "description": "Identity verified through KYC procedures.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["kyc_passed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"compliance.kyc_verified\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#14F195",
+        "color_secondary": "#00FFA3"
+      }
+    },
+
+    {
+      "id": "compliance.security_cleared",
+      "name": "Security Cleared",
+      "category": "Compliance",
+      "description": "Passed internal security review and clearance.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["security_review_passed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"compliance.security_cleared\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#14F195",
+        "color_secondary": "#00FFA3"
+      }
+    },
+
+    {
+      "id": "compliance.ledger_custodian",
+      "name": "Ledger Custodian",
+      "category": "Compliance",
+      "description": "Authorized to maintain and update ledger state.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["ledger_access_granted"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"compliance.ledger_custodian\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#14F195",
+        "color_secondary": "#00FFA3"
+      }
+    },
+
+    {
+      "id": "compliance.compliance_reporter",
+      "name": "Compliance Reporter",
+      "category": "Compliance",
+      "description": "Files compliance and audit reports for the organization.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["compliance_report_submitted"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"compliance.compliance_reporter\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#14F195",
+        "color_secondary": "#00FFA3"
+      }
+    },
+
+    {
+      "id": "compliance.data_steward",
+      "name": "Data Steward",
+      "category": "Compliance",
+      "description": "Handles sensitive or regulated data under strict governance.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["data_access_granted"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"compliance.data_steward\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#14F195",
+        "color_secondary": "#00FFA3"
+      }
+    },
+
+    {
+      "id": "credit.credit_reporter",
+      "name": "Credit Reporter",
+      "category": "Credit",
+      "description": "Submits credit events to the Credit Authority.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["credit_event_submitted"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"credit.credit_reporter\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#00FFA3",
+        "color_secondary": "#14F195"
+      }
+    },
+
+    {
+      "id": "credit.credit_verified",
+      "name": "Credit Verified",
+      "category": "Credit",
+      "description": "Identity and credit profile verified by the Credit Authority.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["credit_identity_verified"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"credit.credit_verified\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#00FFA3",
+        "color_secondary": "#14F195"
+      }
+    },
+
+    {
+      "id": "credit.loan_originator",
+      "name": "Loan Originator",
+      "category": "Credit",
+      "description": "Authorized to create loan governance packets.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["loan_packet_created"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"credit.loan_originator\",\"subject\":\"example\",\"issued_at\":\"2026-02-21T17:50:00Z\",\"sig\":\"SIGNATURE_PLACEHOLDER\"}"
+      },
+      "render": {
+        "style": "hex_core",
+        "animation": "solana_pulse",
+        "color_primary": "#00FFA3",
+        "color_secondary": "#14F195"
+      }
+    },
+
+    {
+      "id": "credit.loan_reviewer",
+      "name": "Loan Reviewer",
+      "category": "Credit",
+      "description": "Validates loan governance packets for correctness and compliance.",
+      "version": "1.0.0",
+      "rules": {
+        "schema": "badge.v1",
+        "version": "1.0.0",
+        "status": "active",
+        "triggers": ["loan_review_completed"],
+        "required_fields": ["subject", "issued_at"],
+        "authority": "GitDigital Badge Authority"
+      },
+      "signature": {
+        "algorithm": "ed25519",
+        "signed_at": "2026-02-21T17:50:00Z",
+        "issuer_public_key": "GD_PUBLIC_KEY_PLACEHOLDER",
+        "signature_value": "SIGNATURE_PLACEHOLDER"
+      },
+      "qr": {
+        "payload": "{\"badge_id\":\"credit.loan_re

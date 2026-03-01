@@ -1,0 +1,83 @@
+{
+  "grant_round": {
+    "round_id": "infra_q2_2026",
+    "template": "infrastructure",
+    "name": "Infrastructure Grant – Q2 2026",
+    "description": "Funding for core engineering, protocol upgrades, and ecosystem infrastructure for Q2 2026.",
+
+    "funding_pool": {
+      "amount_usd": 250000,
+      "sponsor_tier": 2
+    },
+
+    "timeline": {
+      "applications_open": "2026-04-01T00:00:00Z",
+      "applications_close": "2026-04-30T23:59:59Z",
+      "review_start": "2026-05-01T00:00:00Z",
+      "review_end": "2026-05-20T23:59:59Z",
+      "finalization_date": "2026-05-25T00:00:00Z"
+    },
+
+    "committee": {
+      "members": [
+        {
+          "subject": "wallet_tech_01",
+          "roles": ["grant.technical_reviewer"]
+        },
+        {
+          "subject": "wallet_senior_02",
+          "roles": ["grant.senior_reviewer"]
+        },
+        {
+          "subject": "wallet_risk_03",
+          "roles": ["grant.risk_reviewer"]
+        }
+      ]
+    },
+
+    "automation": {
+      "engines": [
+        "grant.scoring_engine",
+        "grant.assignment_engine",
+        "grant.milestone_engine",
+        "grant.audit_engine",
+        "grant.ledger_sync"
+      ],
+      "workflow_control": [
+        "grant.workflow_start",
+        "grant.workflow_pause",
+        "grant.workflow_resume",
+        "grant.workflow_finalize"
+      ]
+    },
+
+    "scoring_version": "1.0.0",
+    "ruleset_version": "1.0.0",
+
+    "milestone_schedule": [
+      {
+        "milestone_id": "architecture_spec",
+        "due_date": "2026-06-10T00:00:00Z"
+      },
+      {
+        "milestone_id": "prototype",
+        "due_date": "2026-07-15T00:00:00Z"
+      },
+      {
+        "milestone_id": "security_review",
+        "due_date": "2026-08-20T00:00:00Z"
+      },
+      {
+        "milestone_id": "mainnet_launch",
+        "due_date": "2026-09-30T00:00:00Z"
+      }
+    ],
+
+    "ledger_sync": {
+      "enabled": true,
+      "write_authority": "ledger.write_authority"
+    },
+
+    "authority": "GitDigital Grant Authority"
+  }
+}

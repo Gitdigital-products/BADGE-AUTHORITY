@@ -1,0 +1,76 @@
+{
+  "cross_authority_wiring": {
+    "version": "1.0.0",
+    "authority": "GitDigital Grant Authority",
+
+    "compliance": {
+      "inputs": [
+        "compliance.kyc_verified",
+        "compliance.security_cleared",
+        "compliance.good_standing"
+      ],
+      "outputs": [
+        "grant.non_compliance",
+        "grant.progress_at_risk",
+        "grant.terminated"
+      ]
+    },
+
+    "credit": {
+      "inputs": [
+        "credit.credit_verified",
+        "credit.no_active_default"
+      ],
+      "outputs": [
+        "grant.completed",
+        "grant.impact_verified",
+        "grant.non_compliance",
+        "grant.terminated"
+      ]
+    },
+
+    "funding": {
+      "inputs": [
+        "funding.sponsor_tier_1",
+        "funding.sponsor_tier_2",
+        "funding.sponsor_tier_3",
+        "funding.infrastructure_sponsor",
+        "funding.disbursement_authority"
+      ],
+      "outputs": [
+        "grant.funded",
+        "grant.workflow_finalize"
+      ]
+    },
+
+    "contributor": {
+      "inputs": [
+        "contributor.core_engineer",
+        "contributor.ecosystem_advocate",
+        "contributor.researcher"
+      ],
+      "outputs": [
+        "grant.success_story",
+        "grant.milestone_1_complete",
+        "grant.milestone_2_complete",
+        "grant.milestone_3_complete",
+        "grant.completed"
+      ]
+    },
+
+    "ledger": {
+      "inputs": [
+        "ledger.write_authority",
+        "ledger.sync_enabled"
+      ],
+      "outputs": [
+        "grant.funded",
+        "grant.milestone_1_complete",
+        "grant.milestone_2_complete",
+        "grant.milestone_3_complete",
+        "grant.completed",
+        "grant.non_compliance"
+      ]
+    }
+  }
+}

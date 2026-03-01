@@ -1,0 +1,313 @@
+
+
+`
+/badges/loan/infrastructure
+/badges/loan/governance
+/badges/loan/execution
+`
+
+---
+
+🟣 Loan Infrastructure Badges
+
+Folder: /badges/loan/infrastructure
+
+---
+
+initialized.json
+`json
+{
+  "id": "loan.infrastructure.initialized",
+  "name": "Loan Infrastructure Initialized",
+  "description": "Core loan infrastructure deployed and registered.",
+  "authority": "System Authority",
+  "trigger": "First-time initialization of the loan module.",
+  "metadata": {
+    "version": "1.0.0"
+  }
+}
+`
+
+---
+
+ledger_ready.json
+`json
+{
+  "id": "loan.infrastructure.ledger_ready",
+  "name": "Loan Ledger Ready",
+  "description": "Ledger engine active and capable of recording loan events.",
+  "authority": "Ledger Authority",
+  "trigger": "Ledger schema migration completed.",
+  "metadata": {
+    "ledger_version": "1.0.0"
+  }
+}
+`
+
+---
+
+webhook_verified.json
+`json
+{
+  "id": "loan.infrastructure.webhook_verified",
+  "name": "Loan Webhook Verified",
+  "description": "Webhook routing for loan events verified and signed.",
+  "authority": "Webhook Authority",
+  "trigger": "Successful signature validation.",
+  "metadata": {
+    "endpoint": "/loan/webhook",
+    "signature_hash": ""
+  }
+}
+`
+
+---
+
+creditpipelineenabled.json
+`json
+{
+  "id": "loan.infrastructure.creditpipelineenabled",
+  "name": "Credit Pipeline Enabled",
+  "description": "Credit scoring and reporting pipeline online.",
+  "authority": "Credit Authority",
+  "trigger": "Credit engine health check passes.",
+  "metadata": {
+    "scoring_model": "v1"
+  }
+}
+`
+
+---
+
+compliance_synced.json
+`json
+{
+  "id": "loan.infrastructure.compliance_synced",
+  "name": "Compliance Synced",
+  "description": "Compliance ruleset synced with governance schema.",
+  "authority": "Compliance Authority",
+  "trigger": "Compliance schema update applied.",
+  "metadata": {
+    "compliance_version": "1.0.0"
+  }
+}
+`
+
+---
+
+fundingauthoritybound.json
+`json
+{
+  "id": "loan.infrastructure.fundingauthoritybound",
+  "name": "Funding Authority Bound",
+  "description": "Funding source and authority binding established.",
+  "authority": "Funding Authority",
+  "trigger": "Funding account registered.",
+  "metadata": {
+    "funding_account": ""
+  }
+}
+`
+
+---
+
+reviewer_ready.json
+`json
+{
+  "id": "loan.infrastructure.reviewer_ready",
+  "name": "Reviewer Workflow Ready",
+  "description": "Reviewer workflow validated and operational.",
+  "authority": "Governance Authority",
+  "trigger": "Reviewer pipeline test passes.",
+  "metadata": {
+    "reviewer_count": 0
+  }
+}
+`
+
+---
+
+🟩 Loan Governance Badges
+
+Folder: /badges/loan/governance
+
+---
+
+schema_v1.json
+`json
+{
+  "id": "loan.governance.schema_v1",
+  "name": "Loan Governance Schema v1",
+  "description": "Loan governance schema version 1 active.",
+  "authority": "Governance Authority",
+  "trigger": "Schema deployment.",
+  "metadata": {
+    "schema_version": "1.0.0"
+  }
+}
+`
+
+---
+
+promissorynoteissued.json
+`json
+{
+  "id": "loan.governance.promissorynoteissued",
+  "name": "Promissory Note Issued",
+  "description": "A promissory note has been issued to a borrower.",
+  "authority": "Loan Issuance Authority",
+  "trigger": "Promissory note creation.",
+  "metadata": {
+    "loan_id": "",
+    "borrower": "",
+    "amount": 0
+  }
+}
+`
+
+---
+
+ledgereventrecorded.json
+`json
+{
+  "id": "loan.governance.ledgereventrecorded",
+  "name": "Loan Ledger Event Recorded",
+  "description": "A loan event has been recorded in the ledger.",
+  "authority": "Ledger Authority",
+  "trigger": "Ledger entry creation.",
+  "metadata": {
+    "loan_id": "",
+    "event_type": "",
+    "timestamp": ""
+  }
+}
+`
+
+---
+
+creditreportgenerated.json
+`json
+{
+  "id": "loan.governance.creditreportgenerated",
+  "name": "Credit Report Generated",
+  "description": "A credit report has been generated for a borrower.",
+  "authority": "Credit Authority",
+  "trigger": "Credit report generation.",
+  "metadata": {
+    "borrower": "",
+    "score": 0,
+    "timestamp": ""
+  }
+}
+`
+
+---
+
+forgiveness_authority.json
+`json
+{
+  "id": "loan.governance.forgiveness_authority",
+  "name": "Loan Forgiveness Authority",
+  "description": "Loan forgiveness authority validated.",
+  "authority": "Governance Authority",
+  "trigger": "Forgiveness ruleset activation.",
+  "metadata": {
+    "ruleset_version": "1.0.0"
+  }
+}
+`
+
+---
+
+collateral_verified.json
+`json
+{
+  "id": "loan.governance.collateral_verified",
+  "name": "Collateral Verified",
+  "description": "Collateral documentation verified.",
+  "authority": "Compliance Authority",
+  "trigger": "Collateral review completed.",
+  "metadata": {
+    "loan_id": "",
+    "collateral_type": ""
+  }
+}
+`
+
+---
+
+🟦 Loan Execution Badges
+
+Folder: /badges/loan/execution
+
+---
+
+disbursement_completed.json
+`json
+{
+  "id": "loan.execution.disbursement_completed",
+  "name": "Loan Disbursement Completed",
+  "description": "Loan funds disbursed.",
+  "authority": "Funding Authority",
+  "trigger": "Disbursement transaction executed.",
+  "metadata": {
+    "loan_id": "",
+    "amount": 0,
+    "timestamp": ""
+  }
+}
+`
+
+---
+
+payment_received.json
+`json
+{
+  "id": "loan.execution.payment_received",
+  "name": "Loan Payment Received",
+  "description": "Payment received and logged.",
+  "authority": "Ledger Authority",
+  "trigger": "Payment event recorded.",
+  "metadata": {
+    "loan_id": "",
+    "amount": 0,
+    "timestamp": ""
+  }
+}
+`
+
+---
+
+default_flagged.json
+`json
+{
+  "id": "loan.execution.default_flagged",
+  "name": "Loan Default Flagged",
+  "description": "Loan flagged for default.",
+  "authority": "Credit Authority",
+  "trigger": "Missed payment threshold reached.",
+  "metadata": {
+    "loan_id": "",
+    "days_overdue": 0
+  }
+}
+`
+
+---
+
+forgiven.json
+`json
+{
+  "id": "loan.execution.forgiven",
+  "name": "Loan Forgiven",
+  "description": "Loan forgiven under governance rules.",
+  "authority": "Forgiveness Authority",
+  "trigger": "Forgiveness approval.",
+  "metadata": {
+    "loan_id": "",
+    "timestamp": ""
+  }
+}
+`
+
+---
